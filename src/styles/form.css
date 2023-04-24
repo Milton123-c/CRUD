@@ -45,6 +45,7 @@
     top: 0.2em;
     right: 1em;
     font-size: 1.2em; 
+    cursor: pointer;
 }
 
 .closer:hover{

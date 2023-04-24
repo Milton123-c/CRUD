@@ -32,7 +32,7 @@ export const FormUser = ({ createNewUser, updateUser, updateUserById, setUpdateU
        const id = updateUser.id;
 
        updateUserById(id, data)
-        alertify.alert("USER UPDATE","Usaurio Actualizado")
+        alertify.alert("USER UPDATE",`Usaurio ${data.first_name} </strong>  Actualizado`)
     setUpdateUser()
     setCreate(false)
     setFormOpen(false)
@@ -63,7 +63,11 @@ export const FormUser = ({ createNewUser, updateUser, updateUserById, setUpdateU
   };
 
   const handleCloser = () => {
+    reset(defaults);
+    setUpdateUser()
+    setCreate(false)
     setFormOpen(false)
+    
   }
 
   return (
