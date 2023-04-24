@@ -6,11 +6,13 @@ import '../styles/cards.css'
 import alertify from 'alertifyjs'
 import '../styles/alertify.min.css'
 
-export const UserCard = ({user,deleteUserById, setUpdateUser, setFormOpen}) => {
+export const UserCard = ({user,deleteUserById, setUpdateUser, setFormOpen, setEstado}) => {
 
     const handleDelete = () => {
         deleteUserById(user.id)
+        setEstado(true)
         alertify.alert("USER DELETE","Usuario Eliminado")
+
     }
 
     const handleUpdate = () =>{
